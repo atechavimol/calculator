@@ -39,9 +39,8 @@ class Calculator {
      */
     int fibonacciNumberFinder(int n){
         if(n == 0) return 0;
-        if(n == 1) return 1;
-        if(n == 2) return 2;
-
+        if(n == 1 || n == 2) return 1;
+     
         int n1 = 1;
         int n2 = 1;
 
