@@ -3,13 +3,12 @@ import java.io.InputStreamReader;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("I totall forgot how to Java. Let's calculator!");
+        System.out.println("I forgot how to Java. Let's calculator!");
 
         try {
             BufferedReader bi = new BufferedReader( new InputStreamReader(System.in));
             Calculator calc = new Calculator();
     
-            System.out.println("enter string of numbers");
     
             while(true) {
                 String[] strNums;
@@ -25,6 +24,22 @@ public class Main {
                     case "subtract":
                         Integer ans = calc.subtract(Integer.parseInt(strNums[1]), Integer.parseInt(strNums[2]));
                         System.out.println(String.valueOf(ans));
+                        break;
+                    case "multiply":
+                        ans = calc.multiply(Integer.parseInt(strNums[1]), Integer.parseInt(strNums[2]));
+                        System.out.println(String.valueOf(ans));
+                        break;
+                    case "divide":
+                        ans = calc.divide(Integer.parseInt(strNums[1]), Integer.parseInt(strNums[2]));
+                        System.out.println(String.valueOf(ans));
+                        break;
+                    case "fib":
+                        ans = calc.fibonacciNumberFinder(Integer.parseInt(strNums[1]));
+                        System.out.println(String.valueOf(ans));
+                        break;
+                    case "binary":
+                        String strAns = calc.intToBinaryNumber(Integer.parseInt(strNums[1]));
+                        System.out.println(strAns);
                         break;
                     default:
                         System.out.println("Invalid format");
